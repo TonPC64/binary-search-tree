@@ -1,6 +1,6 @@
-//////// ‰ø≈Ï Main.cpp //////
-#include<iostream>
-#include<String>
+//////// Main.cpp //////
+#include <iostream>
+#include <string>
 #include "bst.h"
 using namespace std;
 
@@ -13,7 +13,7 @@ void remove();
 
 ////////////////////////////// MAIN //////////////////////////////
 
-void main(){
+int main(){
 	
 	string choice;
 	bool stop = true;
@@ -49,6 +49,8 @@ void main(){
 	break;
 	}
 	}while(stop);
+
+	return 0;
 }
 
 ////////////////////////////// INSERT ///////////////////////////////

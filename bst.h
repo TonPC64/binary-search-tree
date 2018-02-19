@@ -1,6 +1,6 @@
-///// ‰ø≈Ï bst.h ////
+///// bst.h ////
 #include <iostream> 
-
+using namespace std;
 /////////////////////////////////////////////////////////////////////////
 
 template<class Comperable>
@@ -62,14 +62,14 @@ private:
 };
 
 //////////////////////////////////////////////////////////////////////
-template <class Comparable>
-BinarySearchTree<Comparable>::BinarySearchTree( const Comparable & notFound ) : root( NULL ), ITEM_NOT_FOUND( notFound )
+template <class Comperable>
+BinarySearchTree<Comperable>::BinarySearchTree( const Comperable & notFound ) : root( NULL ), ITEM_NOT_FOUND( notFound )
 {
 }
 
-template <class Comparable>
-BinarySearchTree<Comparable>::BinarySearchTree( ) :
- root( NULL ), ITEM_NOT_FOUND( Comparable() )
+template <class Comperable>
+BinarySearchTree<Comperable>::BinarySearchTree( ) :
+ root( NULL ), ITEM_NOT_FOUND( Comperable() )
 {
 }
  
@@ -317,12 +317,12 @@ BinaryNode<Comperable> * BinarySearchTree<Comperable>::clone(BinaryNode<Comperab
 	if(t == NULL )
 		return NULL;
 	else
-		return new BinaryNode<Comparable>( t->element, clone(t->left),clone(t->right));
+		return new BinaryNode<Comperable>( t->element, clone(t->left),clone(t->right));
 }
 
 ///////////////////////// IS EMPTY ////////////////////////////////
-template <class Comparable>
-bool BinarySearchTree<Comparable>::isEmpty( ) const
+template <class Comperable>
+bool BinarySearchTree<Comperable>::isEmpty( ) const
 {
     return root == NULL;
 }
